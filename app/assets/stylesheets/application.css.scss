@@ -1,0 +1,92 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+
+
+ @import "bootstrap";
+ @import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
+
+ $commentwidth: 450px;
+
+ .col-md-5{
+ 	
+ 	float: left;
+ 	font-family: 'Raleway', sans-serif;
+ 	position: relative;
+  padding: 20px;
+  margin: 1em 0 3em;
+  color: white;
+  background: #f3961c;
+  border-radius: 10px;
+  background: linear-gradient(top, #f9d835, #f3961c);
+  
+  border: 2px solid  grey;
+   -webkit-filter: brightness(60%);
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+      }
+
+
+
+ 
+.col-md-5:hover {
+  border: 10px solid #000;
+  border-radius: 5%;
+  -webkit-filter: brightness(80%);
+}
+ 
+
+ .header {
+ 	font-size: 40px;
+ 	font-family: 'Raleway', sans-serif;
+
+
+ }
+
+ .comment{
+ 	float: left;
+ 	background-color: white;
+ 	margin-right: 10px;
+ 	margin-left: 30px;
+ 	font-family: 'Raleway', sans-serif;
+
+ }
+
+ .row {
+ 	padding-left: 30px;
+ }
+
+ .title {
+ 	font-weight: 700;
+ }
+
+
+/* creates triangle */
+.content:after {
+  content: "";
+  display: block; /* reduce the damage in FF3.0 */
+  position: absolute;
+  bottom: -15px;
+  left: 50px;
+  width: 0;
+  border-width: 15px 15px 0;
+  border-style: solid;
+  border-color: #f3961c transparent;
+
+
+}
+

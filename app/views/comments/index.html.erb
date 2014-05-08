@@ -1,0 +1,49 @@
+
+
+<div class="row">
+	<div class="col-md-4"><h1 class="header"> D E A R   <span class="title">J O J O </span></h1></div>
+
+	<div class="col-md-8">
+
+		
+
+		<%= form_for @comment do |f| %>
+			<div class="comment">
+				Your Name:<br>
+				<%= f.text_field :name %>
+			</div>
+			<div class="comment">
+				Your Message: <br><%= f.text_area :message, :cols => 30, :rows => 4 %>
+				<%= f.submit "S U B M I T" %>
+			</div>
+
+		<% end %>
+
+	</div>
+
+
+</div>
+
+<hr>
+
+
+
+
+Comments: <br>
+
+<div class="row">
+	
+		
+			<% @comments.reverse.each do |c| %>
+			<div class="col-md-5">
+				<%= c.message %><br>
+				
+				<br><span text-align="right"><hr>-<%= c.name %></span><br>
+				<%= c.created_at %>
+			</div>
+			<% end %>
+	
+	
+
+
+</div>
